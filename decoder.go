@@ -135,7 +135,7 @@ func (d *Decoder) ReadBool() (bool, error) {
 func (d *Decoder) ReadString() (out string, err error) {
 	var b []byte
 	if b, err = d.ReadSlice(); err == nil {
-		out = binary.ToString(&b)
+		out = ToString(&b)
 	}
 	return
 }
